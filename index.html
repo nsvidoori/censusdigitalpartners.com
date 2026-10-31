@@ -1,0 +1,1395 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Census Digital Partners | Proven Cloud Solutions for the Federal Government</title>
+  <meta name="description" content="Census Digital Partners (CDP) is an SBA-registered Small Business Mentor-Protégé Joint Venture between T-Rex and Vidoori, Inc., delivering innovative, proven cloud solutions to the Federal Government." />
+  <link rel="canonical" href="https://www.censusdigitalpartners.com/" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.censusdigitalpartners.com/" />
+  <meta property="og:title" content="Census Digital Partners" />
+  <meta property="og:description" content="Delivering innovative, proven cloud solutions to the Federal Government. An SBA-registered Small Business Mentor-Protégé Joint Venture focused on 2030 Decennial success." />
+  <meta name="theme-color" content="#2b2a5e" />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <style>
+    /* ─── Tokens ────────────────────────────────────────────────────────── */
+    /* Brand colours are taken from the CDP logo. --steel-500 is the logo's
+       steel blue: fine for large graphics, tints and borders, but only 3.4:1
+       on white, so text, links and icons use --steel-700 (6.2:1) or darker. */
+    :root {
+      /* Steel blue ramp, derived from the logo */
+      --steel-50:  #f5f8fb;
+      --steel-100: #eef3f8;
+      --steel-200: #d6e2ee;
+      --steel-300: #b3c8dc;
+      --steel-400: #8eabc6;
+      --steel-500: #6a8fb0; /* brand */
+      --steel-600: #52779b;
+      --steel-700: #3e6488; /* text-safe steel */
+      --steel-800: #2f4f6e;
+
+      /* Navy ramp, derived from the logo */
+      --navy-950: #1c1b40;
+      --navy-800: #2b2a5e; /* brand */
+      --navy-700: #3d3c78;
+      --navy-100: #e6e6f0;
+
+      /* Neutrals */
+      --white:    #ffffff;
+      --gray-200: #e2e7ee;
+      --gray-600: #545b6a;
+      --gray-700: #3f4655;
+
+      /* Semantic */
+      --bg:          var(--white);
+      --bg-alt:      var(--steel-100);
+      --bg-soft:     var(--steel-50);
+      --text:        var(--navy-950);
+      --text-muted:  var(--gray-600);
+      --heading:     var(--navy-800);
+      --link:        var(--steel-700);
+      --link-hover:  var(--navy-800);
+      --accent:      var(--steel-700);
+      --border:      var(--gray-200);
+      --focus:       var(--steel-700);
+
+      /* Type */
+      --font-sans: 'Inter', system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --step--1: clamp(0.83rem, 0.80rem + 0.15vw, 0.92rem);
+      --step-0:  clamp(1rem, 0.96rem + 0.20vw, 1.0625rem);
+      --step-1:  clamp(1.15rem, 1.08rem + 0.35vw, 1.35rem);
+      --step-2:  clamp(1.35rem, 1.22rem + 0.65vw, 1.75rem);
+      --step-3:  clamp(1.7rem, 1.45rem + 1.2vw, 2.45rem);
+      --step-4:  clamp(2rem, 1.6rem + 2vw, 3.2rem);
+
+      /* Spacing */
+      --sp-1: 0.25rem; --sp-2: 0.5rem; --sp-3: 0.75rem; --sp-4: 1rem;
+      --sp-5: 1.5rem;  --sp-6: 2rem;   --sp-7: 3rem;    --sp-8: 4rem; --sp-9: 6rem;
+
+      /* Layout */
+      --container: 72rem;
+      --gutter: clamp(1rem, 4vw, 2.5rem);
+      --header-h: 4.5rem;
+
+      /* Effects */
+      --radius-sm: 4px;
+      --radius: 8px;
+      --radius-lg: 14px;
+      --shadow-sm: 0 1px 2px rgba(28, 27, 64, .06), 0 1px 3px rgba(28, 27, 64, .08);
+      --shadow:    0 6px 18px rgba(28, 27, 64, .08), 0 2px 4px rgba(28, 27, 64, .05);
+      --shadow-lg: 0 16px 36px rgba(62, 100, 136, .16), 0 4px 10px rgba(28, 27, 64, .06);
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+    }
+
+    /* ─── Reset & Base ─────────────────────────────────────────────────── */
+    *, *::before, *::after { box-sizing: border-box; }
+    * { margin: 0; }
+    html {
+      -webkit-text-size-adjust: 100%;
+      scroll-behavior: smooth;
+      scroll-padding-top: calc(var(--header-h) + var(--sp-4));
+    }
+    body {
+      font-family: var(--font-sans);
+      font-size: var(--step-0);
+      line-height: 1.65;
+      color: var(--text);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+      overflow-wrap: break-word;
+    }
+    img, svg { display: block; max-width: 100%; height: auto; }
+    button { font: inherit; color: inherit; }
+    ul, ol { padding: 0; }
+    a { color: var(--link); text-decoration-thickness: 1px; text-underline-offset: .18em; }
+    a:hover { color: var(--link-hover); }
+
+    :focus-visible {
+      outline: 3px solid var(--focus);
+      outline-offset: 2px;
+      border-radius: var(--radius-sm);
+    }
+    :focus:not(:focus-visible) { outline: none; }
+    main:focus { outline: none; }
+    ::selection { background: var(--steel-200); color: var(--navy-950); }
+
+    .skip-link {
+      position: absolute; left: var(--sp-4); top: var(--sp-4); z-index: 300;
+      padding: var(--sp-3) var(--sp-5);
+      background: var(--navy-800); color: var(--white);
+      border-radius: var(--radius); font-weight: 600; text-decoration: none;
+      transform: translateY(-200%);
+      transition: transform .18s var(--ease);
+    }
+    .skip-link:focus { transform: translateY(0); color: var(--white); }
+
+    .visually-hidden {
+      position: absolute !important;
+      width: 1px; height: 1px; padding: 0; margin: -1px;
+      overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0;
+    }
+
+    /* ─── Layout & Typography ──────────────────────────────────────────── */
+    .inner { width: 100%; max-width: var(--container); margin-inline: auto; padding-inline: var(--gutter); }
+    .section { padding-block: clamp(var(--sp-7), 8vw, var(--sp-9)); }
+    .section--alt { background: var(--bg-alt); }
+
+    h1, h2, h3, h4 {
+      color: var(--heading);
+      line-height: 1.18;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+      text-wrap: balance;
+    }
+    h1 { font-size: var(--step-4); font-weight: 800; letter-spacing: -0.03em; }
+    h2 { font-size: var(--step-3); font-weight: 800; }
+    h3 { font-size: var(--step-2); }
+    h4 { font-size: var(--step-1); }
+    p { text-wrap: pretty; }
+
+    .section-head { max-width: 46rem; margin-bottom: var(--sp-7); }
+    .section-label {
+      display: block;
+      font-size: var(--step--1); font-weight: 700;
+      color: var(--accent);
+      text-transform: uppercase; letter-spacing: .14em;
+      margin-bottom: var(--sp-3);
+    }
+    .divider {
+      width: 3.5rem; height: 4px; border: 0; border-radius: 2px;
+      background: linear-gradient(90deg, var(--steel-500), var(--navy-800));
+      margin-bottom: var(--sp-4);
+    }
+    .section-sub {
+      font-size: var(--step-1); line-height: 1.6;
+      color: var(--text-muted);
+      margin-top: var(--sp-4);
+    }
+    .sub-block { margin-top: clamp(var(--sp-7), 7vw, var(--sp-8)); }
+    .sub-head { margin-bottom: var(--sp-5); max-width: 46rem; }
+    .sub-head p { color: var(--text-muted); margin-top: var(--sp-2); }
+
+    .original-link {
+      display: inline-flex; align-items: center; gap: .45em;
+      margin-top: var(--sp-4);
+      font-size: var(--step--1); font-weight: 600;
+    }
+    .original-link svg { width: 1em; height: 1em; }
+
+    /* ─── Buttons ──────────────────────────────────────────────────────── */
+    .btn {
+      display: inline-flex; align-items: center; justify-content: center; gap: var(--sp-2);
+      padding: .8em 1.5em;
+      border: 2px solid transparent; border-radius: var(--radius);
+      font-size: var(--step-0); font-weight: 600; line-height: 1.2;
+      text-decoration: none; cursor: pointer;
+      transition: background-color .18s var(--ease), color .18s var(--ease),
+                  border-color .18s var(--ease), transform .18s var(--ease), box-shadow .18s var(--ease);
+    }
+    .btn:hover { transform: translateY(-1px); }
+    .btn svg { width: 1em; height: 1em; }
+    .btn--primary { background: var(--navy-800); border-color: var(--navy-800); color: var(--white); box-shadow: var(--shadow-sm); }
+    .btn--primary:hover { background: var(--navy-700); border-color: var(--navy-700); color: var(--white); box-shadow: var(--shadow); }
+    .btn--ghost { background: var(--white); border-color: var(--steel-300); color: var(--navy-800); }
+    .btn--ghost:hover { border-color: var(--steel-700); background: var(--steel-50); color: var(--navy-800); }
+    .btn-row { display: flex; flex-wrap: wrap; gap: var(--sp-3); margin-top: var(--sp-6); }
+
+    /* ─── Header / Nav ─────────────────────────────────────────────────── */
+    .site-header {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(255, 255, 255, .94);
+      backdrop-filter: saturate(1.6) blur(10px);
+      -webkit-backdrop-filter: saturate(1.6) blur(10px);
+      border-bottom: 1px solid var(--border);
+    }
+    .site-header .inner {
+      position: relative;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: var(--sp-4);
+      min-height: var(--header-h);
+    }
+    .brand {
+      display: inline-flex; align-items: center; gap: var(--sp-3);
+      color: var(--navy-800); text-decoration: none; flex-shrink: 1; min-width: 0;
+    }
+    .brand:hover { color: var(--navy-800); }
+    .brand img { width: auto; height: 40px; flex-shrink: 0; }
+    .brand-text { font-weight: 700; font-size: var(--step-0); line-height: 1.2; letter-spacing: -0.01em; }
+    .brand:focus-visible { outline-offset: 6px; }
+
+    .nav-toggle {
+      display: inline-flex; flex-direction: column; justify-content: center; gap: 5px;
+      width: 2.75rem; height: 2.75rem; padding: 0 .65rem; flex-shrink: 0;
+      background: var(--white); border: 1px solid var(--border); border-radius: var(--radius);
+      cursor: pointer;
+    }
+    .nav-toggle-bar {
+      display: block; height: 2px; width: 100%;
+      background: var(--navy-800); border-radius: 2px;
+      transition: transform .22s var(--ease), opacity .15s var(--ease);
+    }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] .nav-toggle-bar:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    .nav-links { list-style: none; }
+    .nav-links a {
+      position: relative; display: block;
+      color: var(--navy-800); font-weight: 600; text-decoration: none;
+    }
+    .nav-links a:hover, .nav-links a.is-active { color: var(--steel-700); }
+
+    /* Mobile: slide-down panel. Without JS the toggle cannot work, so the
+       links stay visible as a plain list (.js is added by the script). */
+    @media (max-width: 61.999rem) {
+      .site-nav {
+        position: absolute; inset-inline: 0; top: 100%;
+        background: var(--white);
+        border-bottom: 1px solid var(--border);
+        box-shadow: var(--shadow-lg);
+        padding: var(--sp-2) 0 var(--sp-4);
+        /* Scroll inside the panel when it is taller than the screen (landscape phones) */
+        max-height: calc(100vh - var(--header-h));
+        max-height: calc(100dvh - var(--header-h));
+        overflow-y: auto;
+        overscroll-behavior: contain;
+      }
+      .js .site-nav { display: none; }
+      .js .site-nav.is-open { display: block; }
+      html:not(.js) .nav-toggle { display: none; }
+      html:not(.js) .site-header { position: static; }
+      html:not(.js) .site-header .inner { flex-wrap: wrap; padding-block: var(--sp-3); }
+      html:not(.js) .site-nav { position: static; box-shadow: none; border: 0; width: 100%; }
+      .nav-links li { border-bottom: 1px solid var(--steel-100); }
+      .nav-links li:last-child { border-bottom: 0; }
+      .nav-links a { padding: var(--sp-3) var(--gutter); font-size: var(--step-1); }
+    }
+    /* Desktop: one horizontal row */
+    @media (min-width: 62rem) {
+      .nav-toggle { display: none; }
+      .nav-links { display: flex; align-items: center; gap: clamp(var(--sp-4), 2.2vw, var(--sp-6)); }
+      .nav-links a {
+        padding-block: calc((var(--header-h) - 1.5rem) / 2);
+        font-size: var(--step--1); letter-spacing: .01em; white-space: nowrap;
+      }
+      .nav-links a::after {
+        content: ""; position: absolute; left: 0; bottom: .95rem;
+        width: 100%; height: 2px; background: var(--steel-500);
+        transform: scaleX(0); transform-origin: left;
+        transition: transform .2s var(--ease);
+      }
+      .nav-links a:hover::after, .nav-links a.is-active::after { transform: scaleX(1); }
+    }
+
+    /* ─── Hero ─────────────────────────────────────────────────────────── */
+    .hero {
+      position: relative; isolation: isolate; overflow: hidden;
+      background:
+        radial-gradient(55rem 35rem at 85% 0%, rgba(106, 143, 176, .22), transparent 60%),
+        radial-gradient(40rem 30rem at 0% 100%, rgba(43, 42, 94, .08), transparent 65%),
+        linear-gradient(180deg, var(--white) 0%, var(--steel-50) 100%);
+      padding-block: clamp(var(--sp-7), 9vw, var(--sp-9));
+      border-bottom: 1px solid var(--border);
+    }
+    /* Faint engineered grid in steel blue */
+    .hero::before {
+      content: ""; position: absolute; inset: 0; z-index: -1;
+      background-image:
+        linear-gradient(rgba(62, 100, 136, .07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(62, 100, 136, .07) 1px, transparent 1px);
+      background-size: 4.5rem 4.5rem;
+      -webkit-mask-image: radial-gradient(70% 70% at 60% 35%, #000 25%, transparent 100%);
+      mask-image: radial-gradient(70% 70% at 60% 35%, #000 25%, transparent 100%);
+    }
+    .hero-grid { display: grid; gap: clamp(var(--sp-6), 5vw, var(--sp-8)); align-items: center; }
+    @media (min-width: 56rem) { .hero-grid { grid-template-columns: 1.2fr .8fr; } }
+    .hero-badge {
+      display: inline-block;
+      background: var(--white);
+      border: 1px solid var(--steel-300);
+      color: var(--steel-700);
+      font-size: .78rem; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 999px;
+      margin-bottom: var(--sp-5);
+    }
+    .hero h1 { max-width: 20ch; }
+    .hero .lead {
+      font-size: var(--step-1); line-height: 1.55;
+      color: var(--gray-700);
+      margin-top: var(--sp-5); max-width: 46ch;
+    }
+    .hero-copy p + p { margin-top: var(--sp-4); }
+    .hero-copy .detail { color: var(--text-muted); max-width: 62ch; }
+    .hero-copy .detail strong { color: var(--navy-800); }
+
+    .glance {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--steel-500);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow);
+      padding: clamp(var(--sp-5), 4vw, var(--sp-6));
+    }
+    .glance img { width: 100%; max-width: 300px; height: auto; margin: 0 auto var(--sp-5); }
+    .glance h2 {
+      font-size: var(--step--1); font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: .14em; margin-bottom: var(--sp-2);
+    }
+    .glance p { color: var(--gray-700); font-size: var(--step--1); line-height: 1.6; }
+    .glance p + p { margin-top: var(--sp-3); }
+    .glance .dba { padding-top: var(--sp-3); border-top: 1px solid var(--border); color: var(--text-muted); }
+
+    /* ─── Stats Bar ────────────────────────────────────────────────────── */
+    .stats-bar { background: var(--white); border-bottom: 1px solid var(--border); }
+    .stats-list {
+      list-style: none;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 11rem), 1fr));
+    }
+    .stat-item { padding: var(--sp-6) var(--sp-3); text-align: center; }
+    .stat-num {
+      display: block;
+      font-size: var(--step-3); font-weight: 800; color: var(--navy-800);
+      line-height: 1; letter-spacing: -0.03em; margin-bottom: var(--sp-2);
+    }
+    .stat-num span { color: var(--steel-700); }
+    .stat-label {
+      display: block;
+      font-size: .78rem; font-weight: 600; color: var(--text-muted);
+      text-transform: uppercase; letter-spacing: .07em; line-height: 1.45;
+    }
+
+    /* ─── Capability Cards ─────────────────────────────────────────────── */
+    .cap-grid {
+      list-style: none;
+      display: grid; gap: var(--sp-5);
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    }
+    .cap-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-6) var(--sp-5);
+      transition: box-shadow .2s var(--ease), transform .2s var(--ease), border-color .2s var(--ease);
+    }
+    .cap-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); border-color: var(--steel-300); }
+    .cap-icon {
+      width: 3rem; height: 3rem; border-radius: var(--radius);
+      display: grid; place-items: center;
+      background: var(--steel-100); color: var(--steel-700);
+      margin-bottom: var(--sp-5);
+    }
+    .cap-icon svg { width: 1.6rem; height: 1.6rem; }
+    .cap-tag {
+      display: block;
+      font-size: .72rem; font-weight: 700; color: var(--steel-700);
+      text-transform: uppercase; letter-spacing: .1em; margin-bottom: var(--sp-1);
+    }
+    .cap-card h3 { font-size: var(--step-1); line-height: 1.3; }
+
+    /* ─── CPARS Quote ──────────────────────────────────────────────────── */
+    .quote {
+      position: relative;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 6px solid var(--steel-500);
+      border-radius: var(--radius-lg);
+      padding: clamp(var(--sp-5), 4vw, var(--sp-7));
+      box-shadow: var(--shadow-sm);
+    }
+    .quote blockquote p {
+      font-size: var(--step-1); line-height: 1.6; color: var(--navy-950);
+    }
+    .quote figcaption {
+      margin-top: var(--sp-5);
+      font-size: var(--step--1); font-weight: 700; color: var(--steel-700);
+      letter-spacing: .02em;
+    }
+
+    /* ─── Size, Scale & Complexity figures ─────────────────────────────── */
+    .fig-groups { display: grid; gap: var(--sp-6); }
+    .fig-group h4 {
+      font-size: var(--step--1); font-weight: 700; color: var(--steel-700);
+      text-transform: uppercase; letter-spacing: .1em; margin-bottom: var(--sp-3);
+    }
+    .fig-grid {
+      list-style: none;
+      display: grid; gap: var(--sp-4);
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
+    }
+    .fig {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 3px solid var(--steel-500);
+      border-radius: var(--radius);
+      padding: var(--sp-5) var(--sp-4);
+    }
+    .fig-value {
+      display: block;
+      font-size: var(--step-3); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05;
+      color: var(--navy-800);
+    }
+    .fig-value small { font-size: .5em; font-weight: 700; letter-spacing: 0; color: var(--steel-700); }
+    .fig-label {
+      display: block; margin-top: var(--sp-2);
+      font-size: var(--step--1); line-height: 1.5; color: var(--gray-700);
+    }
+
+    .cpar {
+      margin-top: var(--sp-6);
+      background: var(--navy-800); color: var(--white);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-5);
+    }
+    .cpar-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--sp-2) var(--sp-5); margin-bottom: var(--sp-4); }
+    .cpar h4 { color: var(--white); font-size: var(--step-1); }
+    .cpar-head p { color: var(--steel-200); font-size: var(--step--1); }
+    .cpar dl {
+      display: grid; gap: var(--sp-3);
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 10rem), 1fr));
+    }
+    .cpar dl > div {
+      background: rgba(255, 255, 255, .08);
+      border: 1px solid rgba(255, 255, 255, .16);
+      border-radius: var(--radius);
+      padding: var(--sp-3) var(--sp-4);
+    }
+    .cpar dt { font-weight: 600; color: var(--white); font-size: var(--step--1); }
+    .cpar dd { color: var(--steel-200); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-top: 2px; }
+
+    /* ─── Scope ────────────────────────────────────────────────────────── */
+    .scope { display: grid; gap: var(--sp-4); }
+    @media (min-width: 60rem) {
+      .scope {
+        grid-template-columns: 1fr 1.25fr 1fr;
+        grid-template-areas:
+          "a center d"
+          "b center e"
+          "c center f";
+      }
+      .scope .s-a { grid-area: a; } .scope .s-b { grid-area: b; } .scope .s-c { grid-area: c; }
+      .scope .s-d { grid-area: d; } .scope .s-e { grid-area: e; } .scope .s-f { grid-area: f; }
+      .scope .s-center { grid-area: center; }
+    }
+    .scope-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: var(--sp-4) var(--sp-5);
+    }
+    .scope-card h4 { font-size: var(--step-0); margin-bottom: var(--sp-2); }
+    .scope-card--flow { background: var(--steel-100); border-color: var(--steel-200); }
+    .scope-list { list-style: none; display: grid; gap: var(--sp-1); font-size: var(--step--1); color: var(--gray-700); }
+    .scope-list li { position: relative; padding-left: 1rem; }
+    .scope-list li::before {
+      content: ""; position: absolute; left: 0; top: .6em;
+      width: 6px; height: 6px; border-radius: 50%; background: var(--steel-500);
+    }
+    .scope-center {
+      display: flex; flex-direction: column; justify-content: center;
+      background: var(--steel-50);
+      border: 2px solid var(--navy-800);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-5);
+      text-align: center;
+    }
+    .scope-center h4 { font-size: var(--step-2); margin-bottom: var(--sp-4); }
+    .ring { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-2); }
+    .ring li {
+      font-size: .78rem; font-weight: 700; color: var(--navy-800);
+      background: var(--white); border: 1px solid var(--steel-300);
+      border-radius: 999px; padding: 4px 12px;
+    }
+    .pieces { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-2); }
+    .pieces li {
+      background: var(--steel-200); color: var(--navy-950);
+      border-radius: var(--radius); padding: var(--sp-3);
+      font-size: var(--step--1); font-weight: 600; line-height: 1.35;
+      display: grid; place-items: center;
+    }
+    .ring-label {
+      font-size: .72rem; font-weight: 700; color: var(--steel-700);
+      text-transform: uppercase; letter-spacing: .1em; margin: var(--sp-4) 0 var(--sp-2);
+    }
+
+    /* ─── Decennial 2030 ───────────────────────────────────────────────── */
+    .program-list { list-style: none; display: grid; gap: var(--sp-4); }
+    @media (min-width: 48rem) { .program-list { grid-template-columns: 1fr 1fr; } }
+    .program {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-left: 4px solid var(--steel-500);
+      border-radius: var(--radius);
+      padding: var(--sp-5);
+      transition: box-shadow .2s var(--ease), transform .2s var(--ease);
+    }
+    .program:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+    .program h4 { font-size: var(--step-0); line-height: 1.35; margin-bottom: var(--sp-2); }
+    .program p { color: var(--text-muted); font-size: var(--step--1); line-height: 1.6; }
+
+    /* ─── Core Offerings table ─────────────────────────────────────────── */
+    .offerings { display: grid; gap: var(--sp-5); align-items: start; }
+    .offerings > * { min-width: 0; }
+    /* 68rem: below this the 46rem table plus the aside would need to scroll */
+    @media (min-width: 68rem) { .offerings { grid-template-columns: minmax(0, 1fr) 15rem; } }
+    .table-scroll {
+      position: relative;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      background: var(--white);
+    }
+    .table-scroll:focus-visible { outline-offset: 3px; }
+    .offer-table { width: 100%; min-width: 46rem; border-collapse: collapse; font-size: var(--step--1); }
+    .offer-table caption { text-align: left; padding: var(--sp-4) var(--sp-5); color: var(--text-muted); caption-side: top; }
+    .offer-table th, .offer-table td { padding: var(--sp-3) var(--sp-3); border-top: 1px solid var(--border); vertical-align: middle; }
+    .offer-table thead th {
+      background: var(--navy-800); color: var(--white);
+      font-weight: 700; font-size: .8rem; line-height: 1.3;
+      text-align: center; border-top: 0;
+    }
+    .offer-table thead th:first-child { text-align: left; padding-left: var(--sp-5); width: 42%; }
+    .offer-table thead th + th { border-left: 1px solid rgba(255, 255, 255, .18); }
+    .offer-table tbody th { text-align: left; font-weight: 400; color: var(--gray-700); padding-left: var(--sp-5); line-height: 1.45; }
+    .offer-table tbody th strong { color: var(--navy-800); font-weight: 700; }
+    .offer-table th.group {
+      background: var(--steel-100); color: var(--navy-800); font-weight: 700;
+    }
+    .offer-table tbody th.sub { padding-left: calc(var(--sp-5) + var(--sp-4)); }
+    .offer-table td { text-align: center; border-left: 1px solid var(--border); }
+    .offer-table tbody tr:hover th:not(.group), .offer-table tbody tr:hover td { background: var(--steel-50); }
+    .check {
+      display: inline-block;
+      width: .5em; height: .95em;
+      border-right: 3px solid var(--steel-700);
+      border-bottom: 3px solid var(--steel-700);
+      transform: rotate(42deg) translate(-1px, -2px);
+    }
+    .scroll-hint { display: block; margin-top: var(--sp-2); font-size: .8rem; color: var(--text-muted); }
+    @media (min-width: 52rem) { .scroll-hint { display: none; } }
+
+    .cycle {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-5);
+    }
+    .cycle h4 { font-size: var(--step-0); margin-bottom: var(--sp-2); }
+    .cycle-end {
+      display: flex; align-items: center; gap: var(--sp-2);
+      font-size: .78rem; font-weight: 700; color: var(--steel-700);
+      text-transform: uppercase; letter-spacing: .1em;
+    }
+    .cycle-end svg { width: 1rem; height: 1rem; }
+    .cycle ul { list-style: none; display: grid; gap: var(--sp-2); margin-block: var(--sp-3); }
+    .cycle li {
+      background: var(--steel-50);
+      border: 1px solid var(--steel-200);
+      border-radius: var(--radius);
+      padding: var(--sp-2) var(--sp-3);
+      font-size: var(--step--1); font-weight: 600; color: var(--navy-800); line-height: 1.4;
+    }
+    .cycle li span { display: block; font-weight: 400; color: var(--text-muted); }
+
+    /* ─── Additional programs ──────────────────────────────────────────── */
+    .addl {
+      display: grid; gap: var(--sp-6);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: clamp(var(--sp-5), 4vw, var(--sp-7));
+    }
+    @media (min-width: 56rem) { .addl { grid-template-columns: 1.1fr .9fr; align-items: center; } }
+    .addl p { color: var(--text-muted); }
+    .addl p { margin-top: var(--sp-4); }
+    .chip-list { list-style: none; display: flex; flex-wrap: wrap; gap: var(--sp-2); }
+    .chip-list li {
+      background: var(--steel-100); border: 1px solid var(--steel-200);
+      color: var(--navy-800); font-weight: 600; font-size: var(--step--1);
+      border-radius: var(--radius); padding: var(--sp-2) var(--sp-3);
+    }
+
+    /* ─── Partnerships & Certifications ────────────────────────────────── */
+    .image-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+    }
+    .image-card img { width: 100%; height: auto; padding: clamp(var(--sp-4), 3vw, var(--sp-6)); }
+    .image-card figcaption {
+      padding: var(--sp-3) var(--sp-5);
+      border-top: 1px solid var(--border);
+      background: var(--steel-50);
+      font-size: var(--step--1); color: var(--text-muted);
+    }
+    .partner-grid {
+      list-style: none;
+      display: grid; gap: var(--sp-5); margin-top: var(--sp-5);
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
+    }
+    .partner {
+      display: flex; align-items: center; gap: var(--sp-5);
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-5);
+      transition: box-shadow .2s var(--ease), transform .2s var(--ease);
+    }
+    .partner:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
+    .partner img { width: 120px; height: auto; flex-shrink: 0; }
+    .partner-kind {
+      display: block;
+      font-size: .72rem; font-weight: 700; color: var(--steel-700);
+      text-transform: uppercase; letter-spacing: .1em; margin-bottom: var(--sp-1);
+    }
+    .partner strong { color: var(--navy-800); font-size: var(--step-1); line-height: 1.3; }
+    @media (max-width: 26rem) {
+      .partner { flex-direction: column; align-items: flex-start; }
+    }
+
+    /* ─── Contract Vehicle & Identifiers ───────────────────────────────── */
+    .panel-grid { display: grid; gap: var(--sp-5); }
+    @media (min-width: 56rem) { .panel-grid { grid-template-columns: 1.3fr .7fr; align-items: start; } }
+    .panel {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: clamp(var(--sp-5), 4vw, var(--sp-6));
+    }
+    .panel h3 { font-size: var(--step-2); margin-bottom: var(--sp-4); }
+    .panel p { color: var(--text-muted); margin-top: var(--sp-4); }
+    .kv { display: grid; gap: var(--sp-3); }
+    .kv > div {
+      background: var(--steel-50);
+      border: 1px solid var(--steel-200);
+      border-radius: var(--radius);
+      padding: var(--sp-3) var(--sp-4);
+    }
+    .kv dt { font-size: .72rem; font-weight: 700; color: var(--steel-700); text-transform: uppercase; letter-spacing: .1em; }
+    .kv dd { font-family: var(--font-mono); font-weight: 700; color: var(--navy-800); margin-top: 2px; word-break: break-word; }
+    .kv dd a { font-family: var(--font-sans); }
+    .kv--2 { grid-template-columns: repeat(auto-fit, minmax(min(100%, 12rem), 1fr)); }
+    .ext-icon { display: inline-block; width: .8em; height: .8em; vertical-align: -0.05em; margin-left: .25em; }
+
+    /* ─── Contact ──────────────────────────────────────────────────────── */
+    .contact-grid {
+      list-style: none;
+      display: grid; gap: var(--sp-5);
+      grid-template-columns: repeat(auto-fit, minmax(min(100%, 18rem), 1fr));
+    }
+    .contact-card {
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-top: 4px solid var(--steel-500);
+      border-radius: var(--radius-lg);
+      padding: var(--sp-6) var(--sp-5);
+      transition: box-shadow .2s var(--ease), transform .2s var(--ease);
+    }
+    .contact-card:hover { box-shadow: var(--shadow-lg); transform: translateY(-3px); }
+    .contact-card h3 { font-size: var(--step-1); }
+    .contact-card .role { font-size: var(--step--1); color: var(--text-muted); margin-top: var(--sp-1); margin-bottom: var(--sp-4); }
+    .contact-lines { list-style: none; display: grid; gap: var(--sp-2); font-size: var(--step--1); }
+    .contact-lines li { display: flex; align-items: center; gap: var(--sp-2); min-width: 0; }
+    .contact-lines svg { width: 1rem; height: 1rem; flex-shrink: 0; color: var(--steel-700); }
+    .contact-lines a { font-weight: 600; overflow-wrap: anywhere; }
+    .contact-lines .mono { font-family: var(--font-mono); color: var(--navy-800); font-weight: 600; }
+
+    /* ─── Privacy ──────────────────────────────────────────────────────── */
+    .privacy { max-width: 46rem; }
+    .privacy p { color: var(--text-muted); margin-top: var(--sp-3); }
+
+    /* ─── Footer ───────────────────────────────────────────────────────── */
+    .site-footer {
+      background: var(--steel-100);
+      border-top: 1px solid var(--steel-200);
+      padding-block: var(--sp-6);
+      font-size: var(--step--1);
+      color: var(--gray-700);
+    }
+    .site-footer .inner { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--sp-4) var(--sp-6); }
+    .footer-brand { display: flex; align-items: center; gap: var(--sp-3); color: var(--navy-800); font-weight: 700; }
+    .footer-brand img { width: auto; height: 32px; }
+    .footer-links { list-style: none; display: flex; flex-wrap: wrap; gap: var(--sp-2) var(--sp-5); }
+    .footer-links a { color: var(--steel-800); font-weight: 600; }
+    .footer-ids { font-family: var(--font-mono); font-size: .78rem; color: var(--gray-600); }
+
+    /* ─── Fade-in on scroll ────────────────────────────────────────────── */
+    /* Hidden state applies only once the script confirms motion is OK, so
+       content is never stuck invisible without JS or with reduced motion. */
+    /* Uses `translate`, not `transform`, so card hover lifts still apply,
+       and keeps the cards' own hover transitions in the list. */
+    .motion-ok .reveal {
+      opacity: 0;
+      translate: 0 18px;
+      transition: opacity .55s var(--ease), translate .55s var(--ease),
+                  transform .2s var(--ease), box-shadow .2s var(--ease), border-color .2s var(--ease);
+    }
+    .motion-ok .reveal.is-visible { opacity: 1; translate: none; }
+
+    /* ─── Motion & Print ───────────────────────────────────────────────── */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: .01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .01ms !important;
+        scroll-behavior: auto !important;
+      }
+      .btn:hover, .cap-card:hover, .program:hover, .partner:hover, .contact-card:hover { transform: none; }
+    }
+    @media print {
+      .site-header, .nav-toggle, .skip-link, .btn-row, .scroll-hint { display: none !important; }
+      body { font-size: 11pt; }
+      .hero { background: none; }
+      .table-scroll { overflow: visible; }
+      .offer-table { min-width: 0; }
+      .motion-ok .reveal { opacity: 1 !important; translate: none !important; transition: none !important; }
+      .cpar { background: none; color: #000; border: 1px solid #999; }
+      .cpar h4, .cpar dt, .cpar dd, .cpar-head p { color: #000; }
+      a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; word-break: break-all; }
+    }
+  </style>
+  <script>
+    /* ─── Behaviour ─────────────────────────────────────────────────────── */
+    document.documentElement.classList.add('js');
+
+    document.addEventListener('DOMContentLoaded', function () {
+      // Footer year (static fallback in the markup)
+      var year = document.getElementById('year');
+      if (year) year.textContent = new Date().getFullYear();
+
+      // Mobile menu
+      var toggle = document.querySelector('.nav-toggle');
+      var nav = document.getElementById('site-nav');
+      var mq = window.matchMedia('(min-width: 62rem)');
+      function setMenu(open) {
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+        toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+        nav.classList.toggle('is-open', open);
+      }
+      if (toggle && nav) {
+        toggle.addEventListener('click', function () {
+          setMenu(toggle.getAttribute('aria-expanded') !== 'true');
+        });
+        nav.addEventListener('click', function (e) {
+          if (e.target.closest('a') && !mq.matches) setMenu(false);
+        });
+        document.addEventListener('keydown', function (e) {
+          if (e.key === 'Escape' && toggle.getAttribute('aria-expanded') === 'true') {
+            setMenu(false);
+            toggle.focus();
+          }
+        });
+        document.addEventListener('click', function (e) {
+          if (!mq.matches && toggle.getAttribute('aria-expanded') === 'true' &&
+              !nav.contains(e.target) && !toggle.contains(e.target)) setMenu(false);
+        });
+        // Close when keyboard focus leaves the open menu
+        nav.addEventListener('focusout', function (e) {
+          if (!mq.matches && !nav.contains(e.relatedTarget) && e.relatedTarget !== toggle) setMenu(false);
+        });
+        var onChange = function () { if (mq.matches) setMenu(false); };
+        if (mq.addEventListener) mq.addEventListener('change', onChange); else mq.addListener(onChange);
+      }
+
+      if (!('IntersectionObserver' in window)) return;
+
+      // Highlight the nav link for the section in view
+      var links = document.querySelectorAll('.nav-links a');
+      var sections = document.querySelectorAll('main section[id]');
+      var spy = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          links.forEach(function (link) {
+            link.classList.toggle('is-active', link.getAttribute('href') === '#' + entry.target.id);
+          });
+        });
+      }, { rootMargin: '-30% 0px -60% 0px' });
+      sections.forEach(function (s) { spy.observe(s); });
+
+      // Fade-in on scroll, skipped entirely when reduced motion is preferred
+      if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+      var fadeEls = document.querySelectorAll('.reveal');
+      document.documentElement.classList.add('motion-ok');
+      var fadeObs = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            fadeObs.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+      fadeEls.forEach(function (el) { fadeObs.observe(el); });
+    });
+  </script>
+</head>
+<body>
+
+  <a class="skip-link" href="#main">Skip to main content</a>
+
+  <!-- ═══════════════════════════════════════════════════ HEADER / NAV -->
+  <header class="site-header">
+    <div class="inner">
+      <a class="brand" href="#top" aria-label="Census Digital Partners, back to top">
+        <img src="logo-mark.svg" alt="" width="66" height="40" />
+        <span class="brand-text">Census Digital Partners</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Open menu">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+      <nav class="site-nav" id="site-nav" aria-label="Main">
+        <ul class="nav-links">
+          <li><a href="#capabilities">Capabilities</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#credentials">Credentials</a></li>
+          <li><a href="#vehicles">Contract Vehicles</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main" tabindex="-1">
+
+    <!-- ═══════════════════════════════════════════════════ HERO -->
+    <section class="hero" id="top" aria-labelledby="hero-title">
+      <div class="inner hero-grid">
+        <div class="hero-copy">
+          <span class="hero-badge">SBA Mentor-Protégé Joint Venture</span>
+          <h1 id="hero-title">Delivering innovative, proven cloud solutions to the Federal Government</h1>
+          <p class="lead">We partner with Federal agencies to modernize the nation’s most mission-critical systems—from design and integration to full-scale transformation.</p>
+          <p class="detail">With exceptional CPARS across enterprise hybrid multi-cloud programs, we deliver complex IT modernization at scale, meeting the toughest cyber requirements and fastest timelines.</p>
+          <p class="detail"><strong>CDP brings proven experience delivering large-scale, mission-critical transformation across Federal enterprises.</strong> Drawing on lessons learned from <strong>eight (8) Census programs</strong>, including the 2020 Technical Integrator contract, CDP is positioned to deliver innovations and success for the 2030 Decennial.</p>
+          <div class="btn-row">
+            <a class="btn btn--primary" href="#capabilities">
+              Explore our capabilities
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
+            </a>
+            <a class="btn btn--ghost" href="#contact">Contact us</a>
+          </div>
+        </div>
+
+        <aside class="glance" aria-labelledby="glance-title">
+          <img src="logo.svg" alt="Census Digital Partners logo" width="320" height="252" />
+          <h2 id="glance-title">At a glance</h2>
+          <p>A purpose-built SBA-registered Small Business Mentor-Protégé Joint Venture (MP JV) between T-Rex and Vidoori, Inc., focused on 2030 Decennial success with USCB understanding, past performance, and ongoing 2030 solutioning.</p>
+          <p class="dba">Census Digital Partners also does business as Criterion Digital Partners.</p>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ STATS -->
+    <div class="stats-bar">
+      <div class="inner">
+      <ul class="stats-list" aria-label="Key figures">
+        <li class="stat-item">
+          <span class="stat-num">8</span>
+          <span class="stat-label">Census programs</span>
+        </li>
+        <li class="stat-item">
+          <span class="stat-num">52</span>
+          <span class="stat-label">Mission-critical systems</span>
+        </li>
+        <li class="stat-item">
+          <span class="stat-num">450<span>+</span></span>
+          <span class="stat-label">ATOs in 18 months</span>
+        </li>
+        <li class="stat-item">
+          <span class="stat-num">48</span>
+          <span class="stat-label">Consecutive ATOs without findings</span>
+        </li>
+        <li class="stat-item">
+          <span class="stat-num">0</span>
+          <span class="stat-label">Downtime &amp; security breaches, 2020 Census operations</span>
+        </li>
+      </ul>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════════════════════════════ CAPABILITIES -->
+    <section class="section section--alt" id="capabilities" aria-labelledby="capabilities-title">
+      <div class="inner">
+        <div class="section-head">
+          <span class="section-label">What we do</span>
+          <div class="divider" aria-hidden="true"></div>
+          <h2 id="capabilities-title">Capability Areas</h2>
+          <p class="section-sub">Leveraging expertise and technology across these capability areas:</p>
+        </div>
+        <ul class="cap-grid">
+          <li class="cap-card reveal">
+            <div class="cap-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M7 18h10.5a4 4 0 0 0 .6-7.95A6 6 0 0 0 6.6 9.2 4.4 4.4 0 0 0 7 18z"/></svg>
+            </div>
+            <span class="cap-tag">Cloud</span>
+            <h3>Cloud Adoption &amp; Infrastructure Optimization</h3>
+          </li>
+          <li class="cap-card reveal">
+            <div class="cap-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l7.5 3v5.5c0 4.6-3.2 8.3-7.5 9.5-4.3-1.2-7.5-4.9-7.5-9.5V6z"/><path d="M9 12l2 2 4-4"/></svg>
+            </div>
+            <span class="cap-tag">Cyber</span>
+            <h3>Cybersecurity</h3>
+          </li>
+          <li class="cap-card reveal">
+            <div class="cap-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="2"/><rect x="9.5" y="9.5" width="5" height="5" rx="1"/><path d="M9 3v3M15 3v3M9 18v3M15 18v3M3 9h3M3 15h3M18 9h3M18 15h3"/></svg>
+            </div>
+            <span class="cap-tag">AI</span>
+            <h3>AI &amp; Cognitive Data Solutions</h3>
+          </li>
+          <li class="cap-card reveal">
+            <div class="cap-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12a8 8 0 0 1-13.7 5.6"/><path d="M4 12a8 8 0 0 1 13.7-5.6"/><path d="M18 3v4h-4"/><path d="M6 21v-4h4"/></svg>
+            </div>
+            <span class="cap-tag">Agile</span>
+            <h3>Agile Transformation</h3>
+          </li>
+          <li class="cap-card reveal">
+            <div class="cap-icon" aria-hidden="true">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="9" cy="8" r="3.5"/><path d="M2.5 20a6.5 6.5 0 0 1 13 0"/><path d="M16 4.5a3.5 3.5 0 0 1 0 7M18 14.5a6.5 6.5 0 0 1 3.5 5.5"/></svg>
+            </div>
+            <span class="cap-tag">CX</span>
+            <h3>Customer Experience</h3>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ EXPERIENCE -->
+    <section class="section" id="experience" aria-labelledby="experience-title">
+      <div class="inner">
+        <div class="section-head">
+          <span class="section-label">Past performance</span>
+          <div class="divider" aria-hidden="true"></div>
+          <h2 id="experience-title">Experience &amp; Past Performance</h2>
+        </div>
+
+        <!-- CPARS quotation: wording is verbatim -->
+        <figure class="quote reveal">
+          <blockquote>
+            <p>“We would definitely use this contractor again. The 2020 Census TI Program is a highly dynamic, time sensitive and mission critical program of national importance. Given the level of complexity of the 2020 Census TI program, T-Rex performed exceptionally on all tasks. T-Rex has faced numerous challenges that have been out of their control but have addressed them with flexible and solid technical business solutions. They successfully integrated and operated the first ever Internet Self Response, adapting to a fully remote work force due to COVID 19, with 0 down time and 0 security breaches during Census 2020 operations. Their flexibility and adaptability to changing requirements has been nothing short of exceptional; their dedication, determination, and commitment to meeting mission objectives in the face of heightened scrutiny and government oversight made the 2020 Census a success.”</p>
+          </blockquote>
+          <figcaption>— 2020 Census Technology Integrator (TI) CPARS</figcaption>
+        </figure>
+
+        <!-- ─── Size, Scale & Complexity (rebuilt from size-scale-complexity.jpg) -->
+        <div class="sub-block" id="size-scale">
+          <div class="sub-head">
+            <h3>Size, Scale &amp; Complexity</h3>
+          </div>
+
+          <div class="fig-groups">
+            <div class="fig-group">
+              <h4>Program</h4>
+              <ul class="fig-grid">
+                <li class="fig reveal"><span class="fig-value">$1.6B</span><span class="fig-label">Contract value</span></li>
+                <li class="fig reveal"><span class="fig-value">52</span><span class="fig-label">Mission-critical systems</span></li>
+                <li class="fig reveal"><span class="fig-value">254</span><span class="fig-label">Regional &amp; local census offices</span></li>
+                <li class="fig reveal"><span class="fig-value">20K</span><span class="fig-label">Workers</span></li>
+              </ul>
+            </div>
+
+            <div class="fig-group">
+              <h4>Hybrid multi-cloud footprint</h4>
+              <ul class="fig-grid">
+                <li class="fig reveal"><span class="fig-value">7,500+</span><span class="fig-label">EC2 servers on AWS GovCloud (US)</span></li>
+                <li class="fig reveal"><span class="fig-value">750</span><span class="fig-label">Database instances on AWS GovCloud (US)</span></li>
+              </ul>
+            </div>
+
+            <div class="fig-group">
+              <h4>Security authorizations</h4>
+              <ul class="fig-grid">
+                <li class="fig reveal"><span class="fig-value">450+</span><span class="fig-label">ATOs in 18 months for infrastructure, system &amp; security components</span></li>
+                <li class="fig reveal"><span class="fig-value">250 <small>to</small> 55</span><span class="fig-label">From 250 days to 55 days</span></li>
+                <li class="fig reveal"><span class="fig-value">48</span><span class="fig-label">Consecutive ATOs without findings</span></li>
+              </ul>
+            </div>
+
+            <div class="fig-group">
+              <h4>Delivery &amp; reach</h4>
+              <ul class="fig-grid">
+                <li class="fig reveal"><span class="fig-value">45</span><span class="fig-label">Concurrent scrum teams</span></li>
+                <li class="fig reveal"><span class="fig-value">16</span><span class="fig-label">Release trains</span></li>
+                <li class="fig reveal"><span class="fig-value">325M</span><span class="fig-label">Residents</span></li>
+                <li class="fig reveal"><span class="fig-value">143M</span><span class="fig-label">Households</span></li>
+                <li class="fig reveal"><span class="fig-value">600K</span><span class="fig-label">Peak concurrent respondents</span></li>
+                <li class="fig reveal"><span class="fig-value">450K</span><span class="fig-label">Field workers supported by mission-critical mobile device management integration &amp; support</span></li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="cpar reveal">
+            <div class="cpar-head">
+              <h4>CPAR evaluation areas</h4>
+              <p>Rating, all contract periods</p>
+            </div>
+            <dl>
+              <div><dt>Quality</dt><dd>Exceptional</dd></div>
+              <div><dt>Schedule</dt><dd>Exceptional</dd></div>
+              <div><dt>Cost Control</dt><dd>Exceptional</dd></div>
+              <div><dt>Management</dt><dd>Exceptional</dd></div>
+              <div><dt>Regulatory Compliance</dt><dd>Exceptional</dd></div>
+            </dl>
+          </div>
+        </div>
+
+        <!-- ─── Scope (rebuilt from size-scale-complexity.jpg) -->
+        <div class="sub-block" id="scope">
+          <div class="sub-head">
+            <h3>Scope</h3>
+          </div>
+          <div class="scope">
+            <div class="scope-card s-a reveal">
+              <h4>Hybrid Infrastructure</h4>
+              <ul class="scope-list">
+                <li>Scalable, hybrid cloud</li>
+                <li>Active cyber defense</li>
+              </ul>
+            </div>
+            <div class="scope-card scope-card--flow s-b reveal">
+              <ul class="scope-list">
+                <li>Business requirements</li>
+                <li>System integration</li>
+                <li>Test automation</li>
+                <li>Performance engineering &amp; test</li>
+                <li>Failover</li>
+              </ul>
+            </div>
+            <div class="scope-card s-c reveal">
+              <h4>System Team Assistance</h4>
+              <ul class="scope-list">
+                <li>DevSecOps</li>
+                <li>Automated environment provisioning</li>
+                <li>Integrated planning</li>
+              </ul>
+            </div>
+
+            <div class="scope-center s-center reveal">
+              <h4>Technical Integration</h4>
+              <ul class="pieces">
+                <li>Public Cloud</li>
+                <li>35 Operations<br />52 Systems</li>
+                <li>On-Prem Data Center</li>
+                <li>Device as a Service</li>
+              </ul>
+              <p class="ring-label">Framed by</p>
+              <ul class="ring">
+                <li>Performance &amp; Scalability</li>
+                <li>Integration Testing</li>
+                <li>Quality Assurance</li>
+                <li>Cybersecurity</li>
+              </ul>
+            </div>
+
+            <div class="scope-card s-d reveal">
+              <h4>Business Architecture</h4>
+              <ul class="scope-list">
+                <li>Business process workflows</li>
+                <li>Interface control</li>
+                <li>Data lineage</li>
+              </ul>
+            </div>
+            <div class="scope-card scope-card--flow s-e reveal">
+              <ul class="scope-list">
+                <li>Data lake</li>
+                <li>Data analytics</li>
+              </ul>
+            </div>
+            <div class="scope-card s-f reveal">
+              <h4>24/7 Operations Centers</h4>
+              <ul class="scope-list">
+                <li>Security</li>
+                <li>Network</li>
+                <li>SRQA</li>
+                <li>Tier 2–3 support</li>
+              </ul>
+            </div>
+          </div>
+          <a class="original-link" href="size-scale-complexity.jpg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></svg>
+            View the original graphic<span class="visually-hidden">: Size, Scale &amp; Complexity and Scope</span>
+          </a>
+        </div>
+
+        <!-- ─── Focused on Decennial 2030 -->
+        <div class="sub-block" id="decennial-2030">
+          <div class="sub-head">
+            <h3>Focused on Decennial 2030</h3>
+            <p>Based on 2020 success and ongoing innovations.</p>
+          </div>
+          <ul class="program-list">
+            <li class="program reveal">
+              <h4>2030 Solutions Integration Research Services (SIRS)</h4>
+              <p>Built a customized Architecture Development Methodology (ADM) framework for 2030 statistical systems; PB-scale data platforms bring AI/ML to Federal analytics.</p>
+            </li>
+            <li class="program reveal">
+              <h4>2026 Census Test IT Integration Support</h4>
+              <p>Developed an application environment management framework, including critical design review, environment and infrastructure design specifications, and process validation for EDL-delivered systems.</p>
+            </li>
+            <li class="program reveal">
+              <h4>USCB Enterprise Testing Support Services (ETest)</h4>
+              <p>Centralized support for enterprise-level testing throughout USCB.</p>
+            </li>
+            <li class="program reveal">
+              <h4>USCB Clerical Matching and Map Update System (CMMU)</h4>
+              <p>Research support for new technologies and data science solutions to redesign and re-engineer the 2030 Census Post-Enumeration Survey Clerical Matching and Map Update (PES CMMU) system.</p>
+            </li>
+            <li class="program reveal">
+              <h4>USCB 2026 Census Test Application Development (CTAD)</h4>
+              <p>Transforming USCB technologies into data-centric, modern, cloud-based IT solutions—modernizing existing applications and developing new ones to support the Decennial Census.</p>
+            </li>
+          </ul>
+        </div>
+
+        <!-- ─── Core Offerings (rebuilt from core-offerings.jpg) -->
+        <div class="sub-block" id="core-offerings">
+          <div class="sub-head">
+            <h3>Core Offerings Across Programs</h3>
+            <p>Every program below spans all five core offerings.</p>
+          </div>
+          <div class="offerings">
+            <div>
+              <div class="table-scroll" role="region" aria-labelledby="offer-caption" tabindex="0">
+                <table class="offer-table">
+                  <caption id="offer-caption">Core offerings delivered by customer and program</caption>
+                  <thead>
+                    <tr>
+                      <th scope="col">Customer / Program</th>
+                      <th scope="col">Cloud Modernization</th>
+                      <th scope="col">Cyber</th>
+                      <th scope="col">AI &amp; Cognitive Data</th>
+                      <th scope="col">Agile Transformation</th>
+                      <th scope="col">Customer Experience (CX)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr><th scope="rowgroup" colspan="6" class="group">US Census Bureau</th></tr>
+                    <tr><th scope="row" class="sub"><strong>2020 TI:</strong> 2020 Decennial Census Technical Integrator</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row" class="sub"><strong>SIRS:</strong> 2030 Solutions Integration Research Services</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row" class="sub"><strong>ETest:</strong> Enterprise Testing Support Services</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row" class="sub"><strong>CMMU:</strong> Clerical Matching and Map Update System</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row" class="sub"><strong>NRTP:</strong> Near Real-Time Processing</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row" class="sub"><strong>2026 Test:</strong> 2026 Census Test IT Integration Support</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row" class="sub"><strong>DAITS:</strong> Disclosure Avoidance IT Support</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row" class="sub"><strong>CTAD:</strong> 2026 Census Test Application Development</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    </tbody>
+                  <tbody>
+                    <tr><th scope="row"><strong>Defense Health Agency / WF 3.0:</strong> Workforce 3.0</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row"><strong>DISA / JITC TEC II:</strong> Joint Interoperability Test Command Test, Eval &amp; Cert II</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row"><strong>US Department of Education / PIVOT-H:</strong> Portfolio of Integrated Value-Oriented Technologies – Hosting</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row"><strong>US TRANSCOM / EADE:</strong> Enterprise Architecture &amp; Data Engineering</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                    <tr><th scope="row"><strong>US Treasury / TCloud:</strong> Treasury Cloud</th><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td><td><span class="check" aria-hidden="true"></span><span class="visually-hidden">Yes</span></td></tr>
+                  </tbody>
+                </table>
+              </div>
+              <span class="scroll-hint">Scroll the table sideways to see all five offerings.</span>
+            </div>
+
+            <aside class="cycle reveal" aria-labelledby="cycle-title">
+              <h4 id="cycle-title">Experience In, Expertise Out</h4>
+              <p class="cycle-end">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+                Experience in
+              </p>
+              <ul>
+                <li>Repeatable Solutions &amp; Processes<span>Toolkits</span></li>
+                <li>Hatchery<span>Innovation Labs</span></li>
+                <li>NEST<span>Continuous Learning &amp; Challenges</span></li>
+                <li>Data-Driven Knowledge Management</li>
+              </ul>
+              <p class="cycle-end">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 4v16M6 14l6 6 6-6"/></svg>
+                Expertise out
+              </p>
+            </aside>
+          </div>
+          <a class="original-link" href="core-offerings.jpg">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></svg>
+            View the original graphic<span class="visually-hidden">: Core Offerings</span>
+          </a>
+        </div>
+
+        <!-- ─── Additional programs -->
+        <div class="sub-block">
+          <div class="addl reveal">
+            <div>
+              <h3>Additional Innovations and Lessons Learned</h3>
+              <p>Innovations and lessons learned from other large enterprise programs across the Federal marketplace add to CDP’s value for our clients.</p>
+              <p>Our repeatable, DevSecOps-driven approach reduces risk, accelerates delivery, and delivers resilient outcomes for the nation’s most demanding missions.</p>
+            </div>
+            <ul class="chip-list" aria-label="Additional programs">
+              <li>Treasury Cloud</li>
+              <li>Education PIVOT-H</li>
+              <li>DHA Workforce 3.0</li>
+              <li>US TRANSCOM EADE</li>
+              <li>DISA JITC TEC II</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ CREDENTIALS -->
+    <section class="section section--alt" id="credentials" aria-labelledby="credentials-title">
+      <div class="inner">
+        <div class="section-head">
+          <span class="section-label">Credentials</span>
+          <div class="divider" aria-hidden="true"></div>
+          <h2 id="credentials-title">Industry Partnerships &amp; Quality Certifications</h2>
+          <p class="section-sub">Our industry partnerships and quality certifications make CDP a top-tier option for Federal modernization efforts.</p>
+        </div>
+
+        <figure class="image-card reveal">
+          <img src="certifications-awards.jpg" width="1467" height="245" loading="lazy"
+               alt="Partnerships, certifications and recognitions: Scaled Agile Partner, Bronze; BSI certified ISO 9001 Quality Management Systems, ISO/IEC 20000-1 IT Service Management and ISO/IEC 27001 Information Security Management; CMMI Maturity Level 3 appraised for Development (DEV) and Services (SVC); The Washington Post Top Workplaces 2023–2024; Bloomberg Government #1 Government Cloud Support Services Provider 2016–21." />
+          <figcaption>Selected partnerships, certifications, and recognitions</figcaption>
+        </figure>
+
+        <ul class="partner-grid">
+          <li class="partner reveal">
+            <img src="aws-partner.png" width="240" height="233" loading="lazy" alt="AWS Partner, Advanced Tier Services badge" />
+            <div>
+              <span class="partner-kind">Industry partnership</span>
+              <strong>AWS Partner (Advanced Tier Services)</strong>
+            </div>
+          </li>
+          <li class="partner reveal">
+            <img src="microsoft-partner.png" width="240" height="272" loading="lazy" alt="Silver Microsoft Partner badge: Application Development, Application Integration, Datacenter, Data Analytics, Data Platform" />
+            <div>
+              <span class="partner-kind">Industry partnership</span>
+              <strong>Microsoft Partner (Silver)</strong>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ CONTRACT VEHICLES & IDENTIFIERS -->
+    <section class="section" id="vehicles" aria-labelledby="vehicles-title">
+      <div class="inner">
+        <div class="section-head">
+          <span class="section-label">How to buy</span>
+          <div class="divider" aria-hidden="true"></div>
+          <h2 id="vehicles-title">Contract Vehicles</h2>
+        </div>
+        <div class="panel-grid">
+          <div class="panel reveal">
+            <h3>GSA Multiple Award Schedule</h3>
+            <dl class="kv kv--2">
+              <div>
+                <dt>Contract</dt>
+                <dd><a href="https://gsaelibrary.gsa.gov/ElibMain/contractorInfo.do?contractNumber=47QTCA26D009W&amp;contractorName=CENSUS+DIGITAL+PARTNERS%2C+LLC&amp;executeQuery=YES" target="_blank" rel="noopener">GSA Multiple Award Schedule (47QTCA26D009W)<svg class="ext-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 4h6v6M20 4l-9 9M18 14v5a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h5"/></svg><span class="visually-hidden"> (opens GSA eLibrary in a new tab)</span></a></dd>
+              </div>
+              <div>
+                <dt>SINs</dt>
+                <dd>518210C, 54151S, OLM</dd>
+              </div>
+            </dl>
+            <p>The GSA Multiple Award Schedule is the Federal Government’s largest and most widely used IDIQ acquisition vehicle. Through our Mentor-Protégé Joint Venture, Census Digital Partners, the IT Professional Services (54151S), Cloud Computing and Cloud Related IT Professional Services (518210C), and Order Level Materials (OLM) SINs support the full range of IT product and service needs.</p>
+          </div>
+
+          <div class="panel reveal" id="identifiers">
+            <h3 id="identifiers-title">Entity Identifiers</h3>
+            <dl class="kv">
+              <div><dt>CAGE</dt><dd>184S5</dd></div>
+              <div><dt>UEI</dt><dd>MG36LCFZQVF1</dd></div>
+              <div><dt>NAICS</dt><dd>541512, 541519, 518210</dd></div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ CONTACT -->
+    <section class="section section--alt" id="contact" aria-labelledby="contact-title">
+      <div class="inner">
+        <div class="section-head">
+          <span class="section-label">Contact</span>
+          <div class="divider" aria-hidden="true"></div>
+          <h2 id="contact-title">More Information</h2>
+        </div>
+        <ul class="contact-grid">
+          <li class="contact-card reveal">
+            <h3>Eric Huang</h3>
+            <p class="role">Chief Strategy Officer, Vidoori (SB Protégé)</p>
+            <ul class="contact-lines">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+                <a href="tel:+14102365356"><span class="visually-hidden">Phone: </span>410-236-5356</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                <a href="mailto:businessdevelopment@vidoori.com"><span class="visually-hidden">Email: </span>businessdevelopment@vidoori.com</a>
+              </li>
+            </ul>
+          </li>
+          <li class="contact-card reveal">
+            <h3>Rick Dansey</h3>
+            <p class="role">T-Rex Chief Growth &amp; Strategy Officer (Mentor)</p>
+            <ul class="contact-lines">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>
+                <a href="tel:+15712087866"><span class="visually-hidden">Phone: </span>571-208-7866</a>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>
+                <a href="mailto:rick.dansey@trexsolutionsllc.com"><span class="visually-hidden">Email: </span>rick.dansey@trexsolutionsllc.com</a>
+              </li>
+            </ul>
+          </li>
+          <li class="contact-card reveal">
+            <h3>CDP</h3>
+            <p class="role">Census Digital Partners</p>
+            <ul class="contact-lines">
+              <li><span class="mono">CAGE: 184S5 · UEI: MG36LCFZQVF1</span></li>
+              <li><span class="mono">NAICS: 541512, 541519, 518210</span></li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a14 14 0 0 1 0 18M12 3a14 14 0 0 0 0 18"/></svg>
+                <a href="https://www.censusdigitalpartners.com/"><span class="visually-hidden">Website: </span>CensusDigitalPartners.com</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════════════════════════════ PRIVACY -->
+    <section class="section" id="privacy" aria-labelledby="privacy-title">
+      <div class="inner">
+        <div class="privacy">
+          <div class="divider" aria-hidden="true"></div>
+          <h2 id="privacy-title">Privacy</h2>
+          <p>This website is provided for informational purposes. If you contact us via email or phone, we will use your information only to respond to your inquiry.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ═══════════════════════════════════════════════════ FOOTER -->
+  <footer class="site-footer">
+    <div class="inner">
+      <div class="footer-brand">
+        <img src="logo-mark.svg" alt="" width="53" height="32" />
+        <span>© <span id="year">2026</span> Census Digital Partners</span>
+      </div>
+      <p class="footer-ids">CAGE 184S5 · UEI MG36LCFZQVF1</p>
+      <ul class="footer-links">
+        <li><a href="#privacy">Privacy</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </div>
+  </footer>
+
+</body>
+</html>
