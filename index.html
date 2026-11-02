@@ -411,35 +411,7 @@
       letter-spacing: .02em;
     }
 
-    /* ─── Size, Scale & Complexity figures ─────────────────────────────── */
-    .fig-groups { display: grid; gap: var(--sp-6); }
-    .fig-group h4 {
-      font-size: var(--step--1); font-weight: 700; color: var(--steel-700);
-      text-transform: uppercase; letter-spacing: .1em; margin-bottom: var(--sp-3);
-    }
-    .fig-grid {
-      list-style: none;
-      display: grid; gap: var(--sp-4);
-      grid-template-columns: repeat(auto-fit, minmax(min(100%, 13rem), 1fr));
-    }
-    .fig {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--steel-500);
-      border-radius: var(--radius);
-      padding: var(--sp-5) var(--sp-4);
-    }
-    .fig-value {
-      display: block;
-      font-size: var(--step-3); font-weight: 800; letter-spacing: -0.03em; line-height: 1.05;
-      color: var(--navy-800);
-    }
-    .fig-value small { font-size: .5em; font-weight: 700; letter-spacing: 0; color: var(--steel-700); }
-    .fig-label {
-      display: block; margin-top: var(--sp-2);
-      font-size: var(--step--1); line-height: 1.5; color: var(--gray-700);
-    }
-
+    /* ─── CPAR evaluation areas ─────────────────────────────────────────── */
     .cpar {
       margin-top: var(--sp-6);
       background: var(--navy-800); color: var(--white);
@@ -447,7 +419,7 @@
       padding: var(--sp-5);
     }
     .cpar-head { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: var(--sp-2) var(--sp-5); margin-bottom: var(--sp-4); }
-    .cpar h4 { color: var(--white); font-size: var(--step-1); }
+    .cpar h3 { color: var(--white); font-size: var(--step-1); }
     .cpar-head p { color: var(--steel-200); font-size: var(--step--1); }
     .cpar dl {
       display: grid; gap: var(--sp-3);
@@ -461,61 +433,6 @@
     }
     .cpar dt { font-weight: 600; color: var(--white); font-size: var(--step--1); }
     .cpar dd { color: var(--steel-200); font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em; margin-top: 2px; }
-
-    /* ─── Scope ────────────────────────────────────────────────────────── */
-    .scope { display: grid; gap: var(--sp-4); }
-    @media (min-width: 60rem) {
-      .scope {
-        grid-template-columns: 1fr 1.25fr 1fr;
-        grid-template-areas:
-          "a center d"
-          "b center e"
-          "c center f";
-      }
-      .scope .s-a { grid-area: a; } .scope .s-b { grid-area: b; } .scope .s-c { grid-area: c; }
-      .scope .s-d { grid-area: d; } .scope .s-e { grid-area: e; } .scope .s-f { grid-area: f; }
-      .scope .s-center { grid-area: center; }
-    }
-    .scope-card {
-      background: var(--white);
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: var(--sp-4) var(--sp-5);
-    }
-    .scope-card h4 { font-size: var(--step-0); margin-bottom: var(--sp-2); }
-    .scope-card--flow { background: var(--steel-100); border-color: var(--steel-200); }
-    .scope-list { list-style: none; display: grid; gap: var(--sp-1); font-size: var(--step--1); color: var(--gray-700); }
-    .scope-list li { position: relative; padding-left: 1rem; }
-    .scope-list li::before {
-      content: ""; position: absolute; left: 0; top: .6em;
-      width: 6px; height: 6px; border-radius: 50%; background: var(--steel-500);
-    }
-    .scope-center {
-      display: flex; flex-direction: column; justify-content: center;
-      background: var(--steel-50);
-      border: 2px solid var(--navy-800);
-      border-radius: var(--radius-lg);
-      padding: var(--sp-5);
-      text-align: center;
-    }
-    .scope-center h4 { font-size: var(--step-2); margin-bottom: var(--sp-4); }
-    .ring { list-style: none; display: flex; flex-wrap: wrap; justify-content: center; gap: var(--sp-2); }
-    .ring li {
-      font-size: .78rem; font-weight: 700; color: var(--navy-800);
-      background: var(--white); border: 1px solid var(--steel-300);
-      border-radius: 999px; padding: 4px 12px;
-    }
-    .pieces { list-style: none; display: grid; grid-template-columns: 1fr 1fr; gap: var(--sp-2); }
-    .pieces li {
-      background: var(--steel-200); color: var(--navy-950);
-      border-radius: var(--radius); padding: var(--sp-3);
-      font-size: var(--step--1); font-weight: 600; line-height: 1.35;
-      display: grid; place-items: center;
-    }
-    .ring-label {
-      font-size: .72rem; font-weight: 700; color: var(--steel-700);
-      text-transform: uppercase; letter-spacing: .1em; margin: var(--sp-4) 0 var(--sp-2);
-    }
 
     /* ─── Decennial 2030 ───────────────────────────────────────────────── */
     .program-list { list-style: none; display: grid; gap: var(--sp-4); }
@@ -752,7 +669,7 @@
       .offer-table { min-width: 0; }
       .motion-ok .reveal { opacity: 1 !important; translate: none !important; transition: none !important; }
       .cpar { background: none; color: #000; border: 1px solid #999; }
-      .cpar h4, .cpar dt, .cpar dd, .cpar-head p { color: #000; }
+      .cpar h3, .cpar dt, .cpar dd, .cpar-head p { color: #000; }
       a[href^="http"]::after { content: " (" attr(href) ")"; font-size: 9pt; word-break: break-all; }
     }
   </style>
@@ -981,144 +898,19 @@
           <figcaption>— 2020 Census Technology Integrator (TI) CPARS</figcaption>
         </figure>
 
-        <!-- ─── Size, Scale & Complexity (rebuilt from size-scale-complexity.jpg) -->
-        <div class="sub-block" id="size-scale">
-          <div class="sub-head">
-            <h3>Size, Scale &amp; Complexity</h3>
+        <!-- CPAR ratings from the 2020 Census TI CPARS -->
+        <div class="cpar reveal">
+          <div class="cpar-head">
+            <h3>CPAR evaluation areas</h3>
+            <p>Rating, all contract periods</p>
           </div>
-
-          <div class="fig-groups">
-            <div class="fig-group">
-              <h4>Program</h4>
-              <ul class="fig-grid">
-                <li class="fig reveal"><span class="fig-value">$1.6B</span><span class="fig-label">Contract value</span></li>
-                <li class="fig reveal"><span class="fig-value">52</span><span class="fig-label">Mission-critical systems</span></li>
-                <li class="fig reveal"><span class="fig-value">254</span><span class="fig-label">Regional &amp; local census offices</span></li>
-                <li class="fig reveal"><span class="fig-value">20K</span><span class="fig-label">Workers</span></li>
-              </ul>
-            </div>
-
-            <div class="fig-group">
-              <h4>Hybrid multi-cloud footprint</h4>
-              <ul class="fig-grid">
-                <li class="fig reveal"><span class="fig-value">7,500+</span><span class="fig-label">EC2 servers on AWS GovCloud (US)</span></li>
-                <li class="fig reveal"><span class="fig-value">750</span><span class="fig-label">Database instances on AWS GovCloud (US)</span></li>
-              </ul>
-            </div>
-
-            <div class="fig-group">
-              <h4>Security authorizations</h4>
-              <ul class="fig-grid">
-                <li class="fig reveal"><span class="fig-value">450+</span><span class="fig-label">ATOs in 18 months for infrastructure, system &amp; security components</span></li>
-                <li class="fig reveal"><span class="fig-value">250 <small>to</small> 55</span><span class="fig-label">From 250 days to 55 days</span></li>
-                <li class="fig reveal"><span class="fig-value">48</span><span class="fig-label">Consecutive ATOs without findings</span></li>
-              </ul>
-            </div>
-
-            <div class="fig-group">
-              <h4>Delivery &amp; reach</h4>
-              <ul class="fig-grid">
-                <li class="fig reveal"><span class="fig-value">45</span><span class="fig-label">Concurrent scrum teams</span></li>
-                <li class="fig reveal"><span class="fig-value">16</span><span class="fig-label">Release trains</span></li>
-                <li class="fig reveal"><span class="fig-value">325M</span><span class="fig-label">Residents</span></li>
-                <li class="fig reveal"><span class="fig-value">143M</span><span class="fig-label">Households</span></li>
-                <li class="fig reveal"><span class="fig-value">600K</span><span class="fig-label">Peak concurrent respondents</span></li>
-                <li class="fig reveal"><span class="fig-value">450K</span><span class="fig-label">Field workers supported by mission-critical mobile device management integration &amp; support</span></li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="cpar reveal">
-            <div class="cpar-head">
-              <h4>CPAR evaluation areas</h4>
-              <p>Rating, all contract periods</p>
-            </div>
-            <dl>
-              <div><dt>Quality</dt><dd>Exceptional</dd></div>
-              <div><dt>Schedule</dt><dd>Exceptional</dd></div>
-              <div><dt>Cost Control</dt><dd>Exceptional</dd></div>
-              <div><dt>Management</dt><dd>Exceptional</dd></div>
-              <div><dt>Regulatory Compliance</dt><dd>Exceptional</dd></div>
-            </dl>
-          </div>
-        </div>
-
-        <!-- ─── Scope (rebuilt from size-scale-complexity.jpg) -->
-        <div class="sub-block" id="scope">
-          <div class="sub-head">
-            <h3>Scope</h3>
-          </div>
-          <div class="scope">
-            <div class="scope-card s-a reveal">
-              <h4>Hybrid Infrastructure</h4>
-              <ul class="scope-list">
-                <li>Scalable, hybrid cloud</li>
-                <li>Active cyber defense</li>
-              </ul>
-            </div>
-            <div class="scope-card scope-card--flow s-b reveal">
-              <ul class="scope-list">
-                <li>Business requirements</li>
-                <li>System integration</li>
-                <li>Test automation</li>
-                <li>Performance engineering &amp; test</li>
-                <li>Failover</li>
-              </ul>
-            </div>
-            <div class="scope-card s-c reveal">
-              <h4>System Team Assistance</h4>
-              <ul class="scope-list">
-                <li>DevSecOps</li>
-                <li>Automated environment provisioning</li>
-                <li>Integrated planning</li>
-              </ul>
-            </div>
-
-            <div class="scope-center s-center reveal">
-              <h4>Technical Integration</h4>
-              <ul class="pieces">
-                <li>Public Cloud</li>
-                <li>35 Operations<br />52 Systems</li>
-                <li>On-Prem Data Center</li>
-                <li>Device as a Service</li>
-              </ul>
-              <p class="ring-label">Framed by</p>
-              <ul class="ring">
-                <li>Performance &amp; Scalability</li>
-                <li>Integration Testing</li>
-                <li>Quality Assurance</li>
-                <li>Cybersecurity</li>
-              </ul>
-            </div>
-
-            <div class="scope-card s-d reveal">
-              <h4>Business Architecture</h4>
-              <ul class="scope-list">
-                <li>Business process workflows</li>
-                <li>Interface control</li>
-                <li>Data lineage</li>
-              </ul>
-            </div>
-            <div class="scope-card scope-card--flow s-e reveal">
-              <ul class="scope-list">
-                <li>Data lake</li>
-                <li>Data analytics</li>
-              </ul>
-            </div>
-            <div class="scope-card s-f reveal">
-              <h4>24/7 Operations Centers</h4>
-              <ul class="scope-list">
-                <li>Security</li>
-                <li>Network</li>
-                <li>SRQA</li>
-                <li>Tier 2–3 support</li>
-              </ul>
-            </div>
-          </div>
-          <a class="original-link" href="size-scale-complexity.jpg">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2"/><path d="M21 16l-5-5-8 9"/></svg>
-            View the original graphic<span class="visually-hidden">: Size, Scale &amp; Complexity and Scope</span>
-          </a>
+          <dl>
+            <div><dt>Quality</dt><dd>Exceptional</dd></div>
+            <div><dt>Schedule</dt><dd>Exceptional</dd></div>
+            <div><dt>Cost Control</dt><dd>Exceptional</dd></div>
+            <div><dt>Management</dt><dd>Exceptional</dd></div>
+            <div><dt>Regulatory Compliance</dt><dd>Exceptional</dd></div>
+          </dl>
         </div>
 
         <!-- ─── Focused on Decennial 2030 -->
