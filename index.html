@@ -552,7 +552,7 @@
       grid-template-columns: repeat(auto-fit, minmax(min(100%, 20rem), 1fr));
     }
     .partner {
-      display: flex; align-items: center; gap: var(--sp-5);
+      display: flex; align-items: center; gap: var(--sp-4);
       background: var(--white);
       border: 1px solid var(--border);
       border-radius: var(--radius-lg);
@@ -560,7 +560,7 @@
       transition: box-shadow .2s var(--ease), transform .2s var(--ease);
     }
     .partner:hover { box-shadow: var(--shadow); transform: translateY(-2px); }
-    .partner img { width: 120px; height: auto; flex-shrink: 0; }
+    .partner img { width: 100px; height: auto; flex-shrink: 0; }
     .partner-kind {
       display: block;
       font-size: .72rem; font-weight: 700; color: var(--steel-700);
@@ -1048,6 +1048,13 @@
         </figure>
 
         <ul class="partner-grid">
+          <li class="partner reveal">
+            <img src="cmmc-level-2.png" width="240" height="228" loading="lazy" alt="Cybersecurity Maturity Model Certification badge: C3PAO Certified, Level 2" />
+            <div>
+              <span class="partner-kind">Quality certification</span>
+              <strong>CMMC Level 2 (C3PAO Certified)</strong>
+            </div>
+          </li>
           <li class="partner reveal">
             <img src="aws-partner.png" width="240" height="233" loading="lazy" alt="AWS Partner, Advanced Tier Services badge" />
             <div>
